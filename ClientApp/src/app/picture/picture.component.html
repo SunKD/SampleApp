@@ -1,8 +1,18 @@
 <div class="text-center">
   <div class="pic-box">
     <h3 *ngIf="!InitialClick">{{ msg }}</h3>
+    <div *ngIf="InitialClick">
+      <div *ngIf="beach; else elseBlock">
+        <img src="https://images.unsplash.com/photo-1505490096310-204ef067fe6b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7175fcb84d23da32ee32fb83f7ef1076&w=1000&q=80"
+        />
+      </div>
+      <ng-template #elseBlock>
+        <img src="https://steemitimages.com/DQmXWuA4xt5KFYPr5AhMaRwG56r86qMbLkntvqUTce5rcb2/tahiti-GettyImages-550870471.jpg">
+      </ng-template>
+    </div>
   </div>
   <form (submit)="onSubmit()">
     <input type="submit" class="btn btn-info btn-lg" value="Submit">
   </form>
+
 </div>
