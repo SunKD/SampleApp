@@ -1,0 +1,8 @@
+<div class="text-center">
+  <div class="pic-box">
+    <h3 *ngIf="!InitialClick">{{ msg }}</h3>
+  </div>
+  <form (submit)="onSubmit()">
+    <input type="submit" class="btn btn-info btn-lg" value="Submit">
+  </form>
+</div>
